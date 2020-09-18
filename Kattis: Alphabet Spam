@@ -1,0 +1,46 @@
+#include <iostream>
+#include <typeinfo>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    cin >> s;
+    int size = s.size();
+    
+    int space = 0; 
+    int lower = 0;
+    int upper = 0;
+    int symbol = 0;
+
+    int i;
+    
+    for (i=0; i<size; i++) {
+        if ((s[i] == '_')) {
+            space++;
+        }
+        else if (islower(s[i])) {
+            lower++;
+        }
+        else if (isupper(s[i])) {
+            upper++;
+        }
+        else {
+            symbol++;
+        }
+    }
+    
+    float perSpace = (float)space/(float)size;
+    float perLower = (float)lower/(float)size;
+    float perUpper = (float)upper/(float)size;
+    float perSymbol = (float)symbol/(float)size;
+    
+    cout << perSpace << endl;
+    cout << perLower << endl;
+    cout << perUpper << endl;
+    cout << perSymbol << endl;
+
+    return 0;
+}
+
+//Difficulty 1.4
