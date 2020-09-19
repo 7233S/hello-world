@@ -1,0 +1,22 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(){
+
+    int n, h, v;
+    cin >> n >> h >> v;
+    
+    int area1 = h*v;
+    int area2 = h*(n-v);
+    int area3 = (n-h)*v;
+    int area4 = (n-h)*(n-v);
+    
+    int maxVol = 4*max(max(area1, area2), max(area3, area4));
+    
+    cout << maxVol;
+    
+    return 0;
+}
+
+//Difficulty 1.3
