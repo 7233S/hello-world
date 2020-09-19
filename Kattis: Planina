@@ -1,0 +1,20 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int func(int n) {
+    if ((n==1)) {
+        return 9;
+    }
+    else {
+        return (pow((2*sqrt(func(n-1))-1),2));
+    }
+}
+
+int main(){
+    int m;
+    cin >> m;
+    cout << func(m);
+}
+
+//Difficulty 1.3
